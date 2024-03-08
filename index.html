@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&amp;display=swap">
     <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="icon" href="assets/img/logo%20final.jpg">
 </head>
 
@@ -32,11 +33,186 @@
         <div></div>
         <div class="d-flex flex-row justify-content-center align-items-center" style="padding: 101px;height: 299.6px;"><button class="btn btn-primary" type="button">Book an appointment</button></div>
     </section>
-    <section id="Services-offered"></section>
+    
+    <section id="Services-offered">
+        <h1 class="text-center" style="font-family: Montserrat, sans-serif;font-size: 40px;font-weight: bold;color: var(--bs-dark);">Services Offered</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card"><img
+                            class="card-img-top w-100 d-block"
+                            src="assets/img/doctor%20(1).jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title
+                                text-center">Cardiology</h4>
+                            <p class="card-text">Cardiology is a branch of medicine that deals with the disorders of the heart as well as some parts of the circulatory system.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card"><img
+                            class="card-img-top w-100 d-block"
+                            src="assets/img/doctor%20(2).jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title
+                                text-center">Neurology</h4>
+                            <p class="card-text">Neurology is a branch of medicine dealing with disorders of the nervous system.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card"><img
+                            class="card-img-top w-100 d-block"
+                            src="assets/img/doctor%20(3).jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title
+                                text-center">Orthopedics</h4>
+                            <p class="card-text">Orthopedics is a branch of medicine that focuses on the care of the musculoskeletal system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card"><img
+                            class="card-img-top w-100 d-block"
+                            src="assets/img/doctor%20(4).jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title
+                                text-center">Pediatrics</h4>
+                            <p class="card-text">Pediatrics is the branch of medicine that involves the medical care of infants, children, and adolescents.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card"><img
+                            class="card-img-top w-100 d-block"
+                            src="assets/img/doctor%20(5).jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title
+                                text-center">Urology</h4>
+                            <p class="card-text">Urology is a branch of medicine that focuses on surgical and medical diseases</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+                                
+    <section> <h1>Doctor Availability</h1>
+        <form id="searchForm" method="get">
+            <label for="service">Service:</label>
+            <select id="service" name="service">
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="orthopedics">Orthopedics</option>
+                <option value="pediatrics">Pediatrics</option>
+                <option value="urology">Urology</option>
+            </select>
+            <label for="timeslot">Timeslot:</label>
+            <select id="timeslot" name="timeslot">
+                <option value="1">9AM - 10AM</option>
+                <option value="2">10AM - 11AM</option>
+                <option value="3">11AM - 12PM</option>
+                <option value="4">12PM - 1PM</option>
+                <option value="5">1PM - 2PM</option>
+                <option value="6">2PM - 3PM</option>
+                <option value="7">3PM - 4PM</option>
+                <option value="8">4PM - 5PM</option>
+            </select>
+            <button type="submit">Check availability</button>
+        </form>
+        <div id="result" hidden>
+            <label for="doctorData">Doctors available:</label>
+            <select id="doctorData">
+                <option>Select a doctor: </option>
+            </select>
+        </div>
+        <div id="error" hidden>
+            <p>Doctor not available</p>
+        </div>
+        <div id="loading" hidden>
+            <p>Loading...</p>
+        </div>
+        <div id="booking" hidden>
+            <form id="bookingForm" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                <input type="hidden" id="booking_doctor" name="doctor">
+                <input type="hidden" id="booking_timeslot" name="timeslot">
+                <input type="hidden" id="booking_service" name="service">
+                <input type="hidden" id="booking_date" name="date">
+                <button type="submit">Book</button>
+            </form>
+        </div></section>
+    <!-- </section>
+    <section id="Gallery">
+        <h1 class="text-center" style="font-family: Montserrat, sans-serif;font-size: 40px;font-weight: bold;color: var(--bs-dark);">Gallery</h1>
+    </section>
+    <section>
+        <div class="container">
+            <div class="gallery">
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+                <div class="img-box"></div>
+            </div>
+        </div>
+    </section> -->
+    <section id="About-us">
+        <h1 class="text-center" style="font-family: Montserrat, sans-serif;font-size: 40px;font-weight: bold;color: var(--bs-dark);">About Us</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-center" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-dark);">Serenity is a multi-specialty hospital that provides high-quality healthcare services. We are committed to providing the best care to our patients. Our team of doctors and nurses are highly skilled and experienced. We offer a wide range of services including cardiology, neurology, orthopedics, pediatrics, and urology. Our hospital is equipped with the latest technology and state-of-the-art facilities. We are dedicated to providing compassionate care to our patients and their families. Our mission is to improve the health and well-being of our community by providing exceptional healthcare services.</p>
+                </div>
+                <div class="col-md-6"><img class="img-fluid" src="aboutus.jpg"></div>
+            </div>
+        </div>
+    </section>
+    <section id="Contact">
+        <h1 class="text-center" style="font-family: Montserrat, sans-serif;font-size: 40px;font-weight: bold;color: var(--bs-dark);">Contact</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-center" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-dark);">Address: LPU Jalandhar,Punjab,<br>Phone:5454646546<br>Email:serenity
+
+
+    </section>
+    <footer class="bg-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="text-center" style="font-family: Poppins, sans-serif;font-size: 20px;color: var(--bs-dark);">© 2024 Serenity Hospital. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/theme.js"></script>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
