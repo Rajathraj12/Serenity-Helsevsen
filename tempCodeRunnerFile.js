@@ -1,0 +1,1 @@
+const searchForm = document.getElementById('searchForm');
